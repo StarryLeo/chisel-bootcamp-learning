@@ -28,3 +28,18 @@ lazy val root = (project in file("."))
     commonSettings
   )
 
+lazy val demo = (project in file("0_demo"))
+  .settings(
+    name := "demo",
+    commonSettings
+  )
+
+lazy val first_module = (project in file("2.1_first_module"))
+  .settings(
+    name := "first_module",
+    commonSettings,
+    libraryDependencies ++= Seq(
+      "edu.berkeley.cs" %% "chisel-iotesters" % "1.5.3",
+    ),
+  )
+
