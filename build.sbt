@@ -43,3 +43,12 @@ lazy val first_module = (project in file("2.1_first_module"))
     ),
   )
 
+lazy val comb_logic = (project in file("2.2_comb_logic"))
+  .settings(
+    name := "comb_logic",
+    commonSettings,
+    libraryDependencies ++= Seq(
+      "edu.berkeley.cs" %% "chisel-iotesters" % "1.5.3",
+    ),
+  )
+
